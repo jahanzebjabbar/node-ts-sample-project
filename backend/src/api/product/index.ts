@@ -1,0 +1,26 @@
+export default (app) => {
+  app.post(
+    `/product`,
+    require('./productCreate').default,
+  );
+  app.put(
+    `/product/:id`,
+    require('./productUpdate').default,
+  );
+  app.delete(
+    `/product`,
+    require('./productDestroy').default,
+  );
+  app.get(
+    `/product/autocomplete`,
+    require('./productAutocomplete').default,
+  );
+  app.get(
+    `/product`,
+    require('./productList').default,
+  );
+  app.get(
+    `/product/:id`,
+    require('./productFind').default,
+  );
+};

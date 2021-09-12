@@ -1,0 +1,26 @@
+export default (app) => {
+  app.post(
+    `/order`,
+    require('./orderCreate').default,
+  );
+  app.put(
+    `/order/:id`,
+    require('./orderUpdate').default,
+  );
+  app.delete(
+    `/order`,
+    require('./orderDestroy').default,
+  );
+  app.get(
+    `/order/autocomplete`,
+    require('./orderAutocomplete').default,
+  );
+  app.get(
+    `/order`,
+    require('./orderList').default,
+  );
+  app.get(
+    `/order/:id`,
+    require('./orderFind').default,
+  );
+};

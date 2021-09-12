@@ -1,0 +1,1 @@
+node-sass ./default.scss ../dist/default.css --output-style compressed

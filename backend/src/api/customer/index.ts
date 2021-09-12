@@ -1,0 +1,26 @@
+export default (app) => {
+  app.post(
+    `/customer`,
+    require('./customerCreate').default,
+  );
+  app.put(
+    `/customer/:id`,
+    require('./customerUpdate').default,
+  );
+  app.delete(
+    `/customer`,
+    require('./customerDestroy').default,
+  );
+  app.get(
+    `/customer/autocomplete`,
+    require('./customerAutocomplete').default,
+  );
+  app.get(
+    `/customer`,
+    require('./customerList').default,
+  );
+  app.get(
+    `/customer/:id`,
+    require('./customerFind').default,
+  );
+};
