@@ -1,6 +1,8 @@
 Visit https://docs.scaffoldhub.io for docs/instructions.
 Version: 1.0.1
 
-node ts
-react ts
-sequalize
+# Techs
+
+* node ts
+* react ts
+* sequalize (ORM)
